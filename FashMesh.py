@@ -2,13 +2,13 @@ import cv2
 import mediapipe as mp
 import time
 
-# cap = cv2.VideoCapture('C:/Users/diopm/Documents/Programmation/FaceMeshProject/Videos/vid1.mp4')  # use case of videos
+# cap = cv2.VideoCapture('Videos/vid1.mp4')  # use case of videos
 cap = cv2.VideoCapture(0)   # Use of webcame
 pTime = 0
 
 mpDraw = mp.solutions.drawing_utils
 mpFaceMesh = mp.solutions.face_mesh
-faceMesh = mpFaceMesh.FaceMesh(max_num_faces=2)
+faceMesh = mpFaceMesh.FaceMesh(max_num_faces=2)  # number or faces to mesh
 drawSpec = mpDraw.DrawingSpec(thickness=1, circle_radius=1)
 
 while True:
