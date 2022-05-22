@@ -2,6 +2,8 @@ import cv2
 import mediapipe as mp
 import time
 
+# Option of video : 0 -> camera or path
+
 # cap = cv2.VideoCapture('Videos/vid1.mp4')  # use case of videos
 cap = cv2.VideoCapture(0)   # Use of webcame
 pTime = 0
@@ -31,6 +33,8 @@ while True:
     pTime = cTime
 
     cv2.putText(img,f'FPS: {int(fps)}', (20,70), cv2.FONT_HERSHEY_PLAIN,3,(0,255,0),3)     
+
+    # Final display
 
     cv2.imshow("Image", img)
     cv2.waitKey(10)
